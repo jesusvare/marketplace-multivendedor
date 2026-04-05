@@ -1,0 +1,20 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno
+.env
+.env.local
+.env.production
+
+# Uploads del servidor
+server/uploads/*.png
+server/uploads/*.jpg
+server/uploads/*.jpeg
+server/uploads/*.webp
+
+# Build del frontend
+client/build/
+
+# Sistema
+.DS_Store
+Thumbs.db
