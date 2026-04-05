@@ -255,7 +255,7 @@ const CategoryCard = ({ emoji, label, color, bg, delay }) => {
   const ref = useScrollReveal();
   return (
     <Link
-      to={`/categorias/${label.toLowerCase()}`}
+      to={`/productos/${label.toLowerCase()}`}
       className="category-card reveal-up"
       ref={ref}
       style={{ "--delay": `${delay}ms`, "--cat-color": color, "--cat-bg": bg }}
@@ -376,7 +376,7 @@ const Home = () => {
               recibe rápido y disfruta de soporte post-venta de calidad.
             </p>
             <div className="hero-trust">
-              <span className="trust-item"><FiStar className="trust-icon gold" /> 4.8 / 5 rating</span>
+              <span className="trust-item"><FiStar className="trust-icon gold" /> 5 / 5 rating</span>
               <span className="trust-sep" />
               <span className="trust-item">🔒 Pago seguro</span>
               <span className="trust-sep" />
@@ -428,7 +428,7 @@ const Home = () => {
               <p className="section-eyebrow">Navega rápido</p>
               <h2 className="section-title reveal-up" ref={catTitleRef}>Explorar por categoría</h2>
             </div>
-            <Link to="/categorias" className="section-link">Ver todas <FiArrowRight /></Link>
+           
           </div>
           <div className="categories-grid">
             {CATEGORIES.map((cat, i) => <CategoryCard key={cat.label} {...cat} delay={i * 55} />)}
