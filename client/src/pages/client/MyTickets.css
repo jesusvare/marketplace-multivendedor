@@ -1,0 +1,309 @@
+.my-tickets-page {
+  animation: fadeIn 0.3s;
+}
+
+/* Header */
+.tickets-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.tickets-page-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.tickets-page-header p {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+/* Grid de tickets */
+.tickets-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ticket-card-client {
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.ticket-card-client:hover {
+  border-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ticket-card-header {
+  margin-bottom: 12px;
+}
+
+.ticket-subject-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.ticket-subject-row h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  flex: 1;
+}
+
+.ticket-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ticket-meta-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.ticket-category,
+.ticket-priority,
+.ticket-date {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.ticket-preview {
+  font-size: 14px;
+  color: var(--secondary-color);
+  line-height: 1.5;
+  margin-bottom: 15px;
+  display: -webkit-box;
+ 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.ticket-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.ticket-messages-count {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--secondary-color);
+}
+
+.assigned-agent {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+/* Estado vacío */
+.empty-tickets {
+  text-align: center;
+  padding: 60px 20px;
+  color: var(--secondary-color);
+}
+
+.empty-tickets h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 15px 0 8px;
+  color: var(--text-color);
+}
+
+.empty-tickets p {
+  margin-bottom: 25px;
+}
+
+/* Formulario nuevo ticket */
+.new-ticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.new-ticket-form textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 5px;
+}
+
+/* Conversación */
+.ticket-conversation-view {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ticket-info-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 15px;
+  background: var(--bg-color);
+  border-radius: 8px;
+}
+
+.ticket-agent {
+  font-size: 12px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.conversation-messages {
+  max-height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-right: 5px;
+}
+
+.conversation-messages::-webkit-scrollbar {
+  width: 5px;
+}
+
+.conversation-messages::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 3px;
+}
+
+/* Burbujas de mensajes */
+.message-bubble {
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.5;
+}
+
+.client-msg {
+  background: var(--primary-color);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 4px;
+}
+
+.agent-msg {
+  background: var(--bg-color);
+  color: var(--text-color);
+  align-self: flex-start;
+  border-bottom-left-radius: 4px;
+}
+
+.bubble-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 12px;
+  gap: 15px;
+}
+
+.client-msg .bubble-header {
+  opacity: 0.85;
+}
+
+.agent-msg .bubble-header {
+  color: var(--secondary-color);
+}
+
+.bubble-header strong {
+  font-size: 13px;
+}
+
+.message-bubble p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* Área de respuesta */
+.reply-area {
+  border-top: 2px solid var(--border-color);
+  padding-top: 15px;
+}
+
+.reply-input {
+  resize: none;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.reply-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reply-hint {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+/* Ticket cerrado */
+.ticket-closed-notice {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  background: rgba(16, 185, 129, 0.1);
+  border-radius: 8px;
+  color: var(--success-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .tickets-page-header {
+    flex-direction: column;
+  }
+
+  .ticket-subject-row {
+    flex-direction: column;
+  }
+
+  .form-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .message-bubble {
+    max-width: 90%;
+  }
+}

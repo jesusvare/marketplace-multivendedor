@@ -1,0 +1,172 @@
+.admin-vendors {
+  animation: fadeIn 0.3s;
+}
+
+.vendors-filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.vendors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.vendor-card {
+  transition: all 0.3s;
+}
+
+.vendor-card:hover {
+  transform: translateY(-3px);
+}
+
+.vendor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vendor-header h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.vendor-owner {
+  color: var(--text-color);
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.vendor-email {
+  color: var(--secondary-color);
+  font-size: 13px;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.status-suspended {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.vendor-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.vendor-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Detalles */
+.vendor-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.detail-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.detail-grid strong {
+  display: block;
+  color: var(--secondary-color);
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.detail-grid p {
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.metric-card {
+  padding: 20px;
+  background: var(--bg-color);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-card .metric-label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.metric-value.large {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .vendors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-metrics,
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vendor-actions,
+  .modal-actions {
+    flex-direction: column;
+  }
+}

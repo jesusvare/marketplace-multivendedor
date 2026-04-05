@@ -1,0 +1,89 @@
+.support-dashboard {
+  animation: fadeIn 0.3s;
+}
+
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.metrics-row h4 {
+  font-size: 14px;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.kpi-icon.tickets {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.kpi-icon.open {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.kpi-icon.progress {
+  background: linear-gradient(135deg, #ffa751 0%, #ffe259 100%);
+}
+
+.kpi-icon.resolved {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+/* Priority badges */
+.priority-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.priority-high {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.priority-medium {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.priority-low {
+  background: rgba(100, 116, 139, 0.1);
+  color: var(--secondary-color);
+}
+
+/* Status badges */
+.status-open {
+  background: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color);
+}
+
+.status-in_progress {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+}
+
+.status-waiting_customer {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning-color);
+}
+
+.status-resolved {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success-color);
+}
+
+.status-closed {
+  background: rgba(100, 116, 139, 0.1);
+  color: var(--secondary-color);
+}
