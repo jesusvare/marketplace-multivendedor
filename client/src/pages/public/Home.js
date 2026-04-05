@@ -405,7 +405,7 @@ const Home = () => {
             </div>
             <div className="hero-badge-card hero-badge-card--b">
               <span className="badge-card-icon">⭐</span>
-              <div><strong>4.8 / 5</strong><small>Calificación</small></div>
+              <div><strong>5 / 5</strong><small>Calificación</small></div>
             </div>
           </div>
         </div>
