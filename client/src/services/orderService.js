@@ -59,6 +59,11 @@ export const orderService = {
     return response.data;
   },
 
+  getAllOrders: async (params = {}) => {
+  const response = await api.get('/orders/all', { params });
+  return response.data;
+},
+
   /**
    * Aplicar cupón a una orden
    * @param {string} couponCode - Código del cupón
@@ -72,3 +77,5 @@ export const orderService = {
     return response.data;
   },
 };
+
+

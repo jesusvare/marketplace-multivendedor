@@ -39,7 +39,7 @@ const ProductDetail = () => {
         setError('Producto no encontrado');
       }
     } catch (err) {
-      setError('Error al cargar el producto');
+      setError('Click en ver catalogo para ver todos los productos');
     } finally {
       setLoading(false);
     }
